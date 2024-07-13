@@ -1,13 +1,21 @@
-for a in range(1, 151):
-    for b in range(a, 151):
-        for c in range(b, 151):
-            for d in range(c, 151):
-                for e in range(d, 151):
+n = int(input())
+total = 1
+for i in range(1, n + 1):
+    for j in range(1, i + i):
+            print(total, end='')
+            if j < i:
+                total += 1
+            else:
+                total -= 1
+    total = 1
 
-                    if a ** 5 + b **5 + c ** 5 + d ** 5 == e ** 5:
-                        # print(a, b, c, d, e)
-                        print(a + b + c + d + e)
+    print()
 
+# 1
+# 121
+# 12321
+# 1234321
+# 123454321
 
 # a, b, c, d = int(input()), int(input()), int(input()), int(input())
 # a, b, c, d = float(input()), float(input()), float(input()), float(input())
