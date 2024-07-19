@@ -1,21 +1,23 @@
-n = int(input())
-total = 1
-for i in range(1, n + 1):
-    for j in range(1, i + i):
-            print(total, end='')
-            if j < i:
-                total += 1
-            else:
-                total -= 1
-    total = 1
+a, b = int(input()), int(input())
+sum = 0
+max = 0
+for i in range(a, b + 1):
+    total = 0
+    for j in range(1, i + 1):
+        if i % j == 0:
+            total += j
+            if total > sum or (total == sum and i > max):
+                sum = total
+                max = i
 
-    print()
+print(max, sum)
 
+# Sample Input 1:
 # 1
-# 121
-# 12321
-# 1234321
-# 123454321
+# 10
+# Sample Output 1:
+# 10 18
+# Sample Input
 
 # a, b, c, d = int(input()), int(input()), int(input()), int(input())
 # a, b, c, d = float(input()), float(input()), float(input()), float(input())
