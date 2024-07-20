@@ -1,16 +1,13 @@
-a, b = int(input()), int(input())
-sum = 0
-max = 0
-for i in range(a, b + 1):
+n = int(input())
+sum = ''
+for i in range(1, n + 1):
     total = 0
+    sum = ''
     for j in range(1, i + 1):
         if i % j == 0:
-            total += j
-            if total > sum or (total == sum and i > max):
-                sum = total
-                max = i
+            sum += '+'
+    print(i, sum, sep='')
 
-print(max, sum)
 
 # Sample Input 1:
 # 1
