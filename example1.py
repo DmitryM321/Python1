@@ -1,14 +1,17 @@
-n = int(input())
-if n < 9:
-    print(n)
-else:
-    while n > 9:
-        sum = 0
-        while (n) > 0:
-            sum += n % 10
-            n = n // 10
-        n = sum
-    print(sum)
+a, b = int(input()), int(input())
+total = 0
+for i in range (a, b + 1):
+        total = 0
+
+        for j in range (1, i + 1):
+                if i % (j) == 0:
+                        total += 1
+        if total == 2 and i > 1:
+                print(i)
+
+
+
+
 
 
 # a, b, c, d = int(input()), int(input()), int(input()), int(input())
