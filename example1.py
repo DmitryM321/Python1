@@ -1,37 +1,24 @@
-n = int(input())
-count3 = 0
-count_last_dig = 0
-even = 0
-sum_more5 = 0
-deterioration_more7 = 1
-count_0_and_5 = 0
-a1 = n % 10
-while n > 0:
-    a = n % 10
-    n = n // 10
-    if a == 3:
-        count3 += 1
-    if a1 == a:
-        count_last_dig += 1
-    if a % 2 == 0:
-        even += 1
-    if a > 5:
-        sum_more5 += a
-    if a == 0 or a == 5:
-        count_0_and_5 += 1
-    if a > 7:
-        deterioration_more7 *= a
-    if deterioration_more7 == 7:
-        deterioration_more7 = 7
-        if a != 7:
-            deterioration_more7 = 1
+s = input()
+if 5 <= len(s) <= 15 and s[0] == '@' and (s[1:].isdigit() or (s[1:].isalnum() and s[1:].islower())):
 
-print(count3)
-print(count_last_dig)
-print(even)
-print(sum_more5)
-print(deterioration_more7)
-print(count_0_and_5)
+    print('Correct')
+else:
+    print('Incorrect')
+
+# s = input()
+#
+# if  s[1:].isalnum() or s[1:].isalpha()  :
+#
+#     print('Correct')
+# else:
+#     print('Incorrect')
+
+
+
+# print(s[:s.find('h') - 1], s[s.rfind('h'):])
+
+# In the hole in the ground there lived a hobbit
+
 
 # a, b, c, d = int(input()), int(input()), int(input()), int(input())
 # a, b, c, d = float(input()), float(input()), float(input()), float(input())
