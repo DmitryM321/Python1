@@ -1,24 +1,28 @@
-s = input()
-if 5 <= len(s) <= 15 and s[0] == '@' and (s[1:].isdigit() or (s[1:].isalnum() and s[1:].islower())):
+a = input()
+b = ''
+count1 = 0
+count2 = 0
+x = 'eyopaxcETOPAHXCBM'
+y = 'еуорахсЕТОРАНХСВМ'
 
-    print('Correct')
-else:
-    print('Incorrect')
+for i in range(len(a)):
+    count1 += ord(a[i])
 
-# s = input()
-#
-# if  s[1:].isalnum() or s[1:].isalpha()  :
-#
-#     print('Correct')
-# else:
-#     print('Incorrect')
+for k in range(len(a)):
+    for i in range(len(x)):
+        if a[k] == x[i]:
+            b += y[i]
+            break
+    else:
+        b += a[k]
 
+for k in range(len(b)):
+    count2 += ord(b[k])
+print("Старая стоимость: ", count1*3, '🐝', sep='')
+print('Новая стоимость: ', count2*3, '🐝', sep='')
 
-
-# print(s[:s.find('h') - 1], s[s.rfind('h'):])
 
 # In the hole in the ground there lived a hobbit
-
 
 # a, b, c, d = int(input()), int(input()), int(input()), int(input())
 # a, b, c, d = float(input()), float(input()), float(input()), float(input())
