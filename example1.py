@@ -1,25 +1,18 @@
-a = input()
-b = ''
-count1 = 0
-count2 = 0
-x = 'eyopaxcETOPAHXCBM'
-y = 'еуорахсЕТОРАНХСВМ'
+a = 'abcdefghijklmnopqrstuvwxyz'
+b = int(input())
+c = input()
+d = ''
 
-for i in range(len(a)):
-    count1 += ord(a[i])
-
-for k in range(len(a)):
-    for i in range(len(x)):
-        if a[k] == x[i]:
-            b += y[i]
+for i in range(len(c)):
+    for j in range(len(a)):
+        if c[i] == a[j]:
+            x = ord(a[j]) - b
+            if x <= ord('a'):
+                x +=26
+            d += chr(x)
             break
-    else:
-        b += a[k]
+print(d)
 
-for k in range(len(b)):
-    count2 += ord(b[k])
-print("Старая стоимость: ", count1*3, '🐝', sep='')
-print('Новая стоимость: ', count2*3, '🐝', sep='')
 
 
 # In the hole in the ground there lived a hobbit
